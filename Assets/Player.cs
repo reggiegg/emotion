@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
 	private Vector3 _curDest;
-	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.05f, EMOTION_DECAY = 0.001;
+	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.05f, EMOTION_DECAY = 0.001f;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -71,9 +71,9 @@ public class Player : MonoBehaviour {
 		{
 			_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
 		}
-		_anger = Mathf.Min (0, _anger - EMOTION_DECAY);
-		_fear = Mathf.Min (0, _fear - EMOTION_DECAY);
-		_sadness = Mathf.Min (0, _sadness - EMOTION_DECAY);
-		_confusion = Mathf.Min (0, _confusion - EMOTION_DECAY);
+		_anger = Mathf.Max (0, _anger - EMOTION_DECAY);
+		_fear = Mathf.Max (0, _fear - EMOTION_DECAY);
+		_sadness = Mathf.Max (0, _sadness - EMOTION_DECAY);
+		_confusion = Mathf.Max (0, _confusion - EMOTION_DECAY);
 	}
 }

@@ -36,16 +36,21 @@ public class TransX : MonoBehaviour {
 		}
 
 		Vector3 position = this.transform.position;
+		//float anger = ((Player)GameObject.FindGameObjectWithTag("Player")).Anger;
+		//float anger = 0.0f;
+		Player p = (Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player));
+
+		//Player p = MonoBehaviour.FindObjectOfType(Player);
 
 		if (deltaLeftMax > 0)
 		{
-			deltaLeft = (int)Mathf.Round(deltaLeftMax * emotionScale);
+			deltaLeft = (int)Mathf.Round(deltaLeftMax * p.Anger);
 			position.x = originalX - deltaLeft;
 		}
 
 		if (deltaRightMax > 0)
 		{
-			deltaRight = (int)Mathf.Round(deltaRightMax * emotionScale);
+			deltaRight = (int)Mathf.Round(deltaRightMax * p.Anger);
 			position.x = originalX + deltaRight;
 
 		}
