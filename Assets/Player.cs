@@ -52,6 +52,7 @@ public class Player : MonoBehaviour {
 
 	void updateEmotions()
 	{
+
 		if (Input.GetKey (KeyCode.A)) 
 		{
 			_anger = Mathf.Min(1, _anger + EMOTION_CHANGE);
@@ -71,9 +72,35 @@ public class Player : MonoBehaviour {
 		{
 			_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
 		}
+
 		_anger = Mathf.Max (0, _anger - EMOTION_DECAY);
 		_fear = Mathf.Max (0, _fear - EMOTION_DECAY);
 		_sadness = Mathf.Max (0, _sadness - EMOTION_DECAY);
 		_confusion = Mathf.Max (0, _confusion - EMOTION_DECAY);
+	}
+
+	public void triggerEmotion(Trigger.Emotions emotion)
+	{
+		switch(emotion)
+		{
+		case Trigger.Emotions.ANGER:
+			_anger = Mathf.Min(1, _anger + EMOTION_CHANGE);
+			break;
+		case Trigger.Emotions.SAD:
+			_sadness = Mathf.Min(1, _sadness + EMOTION_CHANGE);
+			break;
+		case Trigger.Emotions.FEAR:
+			_fear = Mathf.Min(1, _fear + EMOTION_CHANGE);
+			break;
+		case Trigger.Emotions.CONFUSION:
+			_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
+			break;
+		case Trigger.Emotions.UNDEFINED:
+
+			break;
+		default:
+
+			break;
+		}
 	}
 }
