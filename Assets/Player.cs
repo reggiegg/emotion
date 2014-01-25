@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
-	private const float EMOTION_CHANGE = 0.007f, EMOTION_DECAY = 0.005f, NEGATIVE_EMOTION_CHANGE = 0.01f;
+	private const float EMOTION_CHANGE = 0.01f, EMOTION_DECAY = 0.0025f, NEGATIVE_EMOTION_CHANGE = 0.01f;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		updateEmotions ();
-		Debug.Log("Anger: " + _anger);
+		//Debug.Log("Anger: " + _anger);
 
 	}
 
