@@ -40,6 +40,6 @@ public class PlayerMove : MonoBehaviour {
 			}
 		}
 		Vector3 v = rigidbody2D.velocity;
-		Debug.Log("Player velocity: " + v);
+		//Debug.Log("Player velocity: " + v);
 	}
 }
