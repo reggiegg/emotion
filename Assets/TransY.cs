@@ -1,24 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TransX : MonoBehaviour {
+public class TransY : MonoBehaviour {
 
 	private float emotionScale = 0.0f;
-	private int deltaLeft, deltaRight;
-	public int deltaLeftMax, deltaRightMax;
+	private int deltaUp, deltaDown;
+	public int deltaUpMax, deltaDownMax;
 
-	private float originalX;
+	private float originalY;
 
 	// Use this for initialization
 	void Start () {
-		originalX = this.transform.position.x;
+		originalY = this.transform.position.y;
 		// Prevent weird movment. Block can only move one direction on an axis
 		// either left or right from its normal position (not including movement
 		// for it to return to its original position
-		if (deltaLeftMax > 0)
-			deltaRightMax = 0;
-		if (deltaRightMax > 0)
-			deltaLeftMax = 0;
+		if (deltaUpMax > 0)
+			deltaDownMax = 0;
+		if (deltaDownMax > 0)
+			deltaUpMax = 0;
 	}
 	
 	// Update is called once per frame
@@ -37,16 +37,16 @@ public class TransX : MonoBehaviour {
 
 		Vector3 position = this.transform.position;
 
-		if (deltaLeftMax > 0)
+		if (deltaUpMax > 0)
 		{
-			deltaLeft = (int)Mathf.Round(deltaLeftMax * emotionScale);
-			position.x = originalX - deltaLeft;
+			deltaUp = (int)Mathf.Round(deltaUpMax * emotionScale);
+			position.y = originalY + deltaUp;
 		}
 
-		if (deltaRightMax > 0)
+		if (deltaDownMax > 0)
 		{
-			deltaRight = (int)Mathf.Round(deltaRightMax * emotionScale);
-			position.x = originalX + deltaRight;
+			deltaDown = (int)Mathf.Round(deltaDownMax * emotionScale);
+			position.y = originalY - deltaDown;
 
 		}
 
