@@ -22,7 +22,21 @@ public class PlayerMove : MonoBehaviour {
 
 		if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed)
 		{
-			rigidbody2D.AddForce(new Vector3(Input.GetAxis("Horizontal") * moveForce, 0.0f));
+			float dx = 0.0f;
+
+			if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed * 0.25f)
+			{
+				dx = moveForce * 8;
+			}
+			else if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed * 0.5f)
+			{
+				dx = moveForce * 4;
+			}
+			else
+			{
+				dx = moveForce;
+			}
+			rigidbody2D.AddForce(new Vector3(Input.GetAxis("Horizontal") * dx, 0.0f));
 		}
 
 		if (jumping)

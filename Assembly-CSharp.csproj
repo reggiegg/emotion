@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EmotionMonitor.cs" />
+     <Compile Include="Assets\EmotionOverlay.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PlayerMove.cs" />
      <Compile Include="Assets\Scale.cs" />
