@@ -231,3 +231,19 @@ emotion.userprefs
 *.dll
 
 *.mdb
+
+Assembly-CSharp-vs.csproj
+
+*.csproj
+
+*.csproj
+
+*.csproj
+
+Assembly-CSharp.csproj
+
+*.dll
+
+*.mdb
+
+*.userprefs
