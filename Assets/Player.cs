@@ -24,30 +24,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKey (KeyCode.LeftArrow)) 
-		{
-			_curDest.x -= MAX_MOVE_SPEED * Time.deltaTime;
-		}
-		
-		if(Input.GetKey(KeyCode.RightArrow))
-		{
-			_curDest.x += MAX_MOVE_SPEED * Time.deltaTime;
-		}
-
-		if (Input.GetKey (KeyCode.DownArrow)) 
-		{
-			_curDest.y -= MAX_MOVE_SPEED * Time.deltaTime;
-		}
-		
-		if(Input.GetKey(KeyCode.UpArrow))
-		{
-			_curDest.y += MAX_MOVE_SPEED * Time.deltaTime;
-		}
-
 		updateEmotions ();
 
 		//transform.position = dest;
-
 	}
 
 	void updateEmotions()
