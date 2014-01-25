@@ -4,8 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
-	private Vector3 _curDest;
-	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.001f, EMOTION_DECAY = 0.00005f, NEGATIVE_EMOTION_CHANGE = 0.001f;
+	private const float EMOTION_CHANGE = 0.001f, EMOTION_DECAY = 0.00005f, NEGATIVE_EMOTION_CHANGE = 0.001f;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -18,7 +17,6 @@ public class Player : MonoBehaviour {
 		_fear = 0f;
 		_sadness = 0f;
 		_confusion = 0f;
-		_curDest = transform.position;
 	}
 	
 	// Update is called once per frame
