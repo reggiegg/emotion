@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Scale : MonoBehaviour {
 
-	private float emotionScale = 0.0f;
 	private float deltaScale;
 	public float deltaScaleMax = 1.0f;
 
@@ -16,23 +15,15 @@ public class Scale : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// Temp code before emotion system is in place
-		if (Input.GetButton("Fire1"))
-		{
-			if (emotionScale <= 1.0f)
-				emotionScale += 0.01f;
-		}
-		if (Input.GetButton("Fire2"))
-		{
-			if (emotionScale >= 0.01f)
-				emotionScale -= 0.01f;
-		}
 
 		Vector3 scale = this.transform.localScale;
 
+		Player p = (Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player));
+
+
 		if (deltaScaleMax != 1.0f)
 		{
-			deltaScale = deltaScaleMax * emotionScale;
+			deltaScale = deltaScaleMax * p.Fear;
 			scale.x = originalScale.x + deltaScale;
 			scale.y = originalScale.y + deltaScale;
 		}
