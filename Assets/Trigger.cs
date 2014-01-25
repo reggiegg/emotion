@@ -23,11 +23,16 @@ public class Trigger : MonoBehaviour {
 	
 	}
 
-	void OnTriggerStay2D(Collider2D coll)
+	void OnTriggerEnter2D(Collider2D coll)
 	{
 		Player p = (Player)coll.GetComponent (typeof(Player));
 		if (p != null) {
-			p.triggerEmotion(this.emotion, addsEmotion);
+			p.triggerEmotion (this.emotion, addsEmotion);
 		}
+	}
+
+	void OnTriggerStay2D(Collider2D coll)
+	{
+
 	}
 }

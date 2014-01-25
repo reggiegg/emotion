@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
 	private Vector3 _curDest;
-	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.05f, EMOTION_DECAY = 0.001f, NEGATIVE_EMOTION_CHANGE = 0.05f;
+	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.001f, EMOTION_DECAY = 0.00005f, NEGATIVE_EMOTION_CHANGE = 0.001f;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour {
 		updateEmotions ();
 
 		//transform.position = dest;
-		transform.position = Vector3.Lerp (transform.position, _curDest, Time.deltaTime);
+
 	}
 
 	void updateEmotions()
