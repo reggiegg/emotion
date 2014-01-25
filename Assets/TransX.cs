@@ -16,8 +16,16 @@ public class TransX : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (emotionScale <= 1.0f)
-			emotionScale += 0.01f;
+		if (Input.GetButton("Fire1"))
+		{
+			if (emotionScale <= 1.0f)
+				emotionScale += 0.01f;
+		}
+		if (Input.GetButton("Fire2"))
+		{
+			if (emotionScale >= 0.01f)
+				emotionScale -= 0.01f;
+		}
 		deltaLeft = (int)Mathf.Round(deltaLeftMax * emotionScale);
 		Vector3 position = this.transform.position;
 		position.x = originalX - deltaLeft;
