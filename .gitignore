@@ -247,3 +247,9 @@ Assembly-CSharp.csproj
 *.mdb
 
 *.userprefs
+
+*.dll
+
+*.dll
+
+*.userprefs
