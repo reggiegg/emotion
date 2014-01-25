@@ -22,15 +22,18 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+	}
+
+	void FixedUpdate ()
+	{
 		updateEmotions ();
 		Debug.Log("Anger: " + _anger);
 
-		//transform.position = dest;
 	}
 
 	void updateEmotions()
 	{
-
+		/*
 		if (Input.GetKey (KeyCode.A)) 
 		{
 			_anger = Mathf.Min(1, _anger + EMOTION_CHANGE);
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour {
 		{
 			_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
 		}
-
+*/
 		_anger = Mathf.Max (0, _anger - EMOTION_DECAY);
 		_fear = Mathf.Max (0, _fear - EMOTION_DECAY);
 		_sadness = Mathf.Max (0, _sadness - EMOTION_DECAY);

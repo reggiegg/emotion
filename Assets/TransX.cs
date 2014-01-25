@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TransX : MonoBehaviour {
 
-	private float emotionScale = 0.0f;
 	private int deltaLeft, deltaRight;
 	public int deltaLeftMax, deltaRightMax;
 
@@ -23,17 +22,6 @@ public class TransX : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// Temp code before emotion system is in place
-		if (Input.GetButton("Fire1"))
-		{
-			if (emotionScale <= 1.0f)
-				emotionScale += 0.01f;
-		}
-		if (Input.GetButton("Fire2"))
-		{
-			if (emotionScale >= 0.01f)
-				emotionScale -= 0.01f;
-		}
 
 		Vector3 position = this.transform.position;
 		//float anger = ((Player)GameObject.FindGameObjectWithTag("Player")).Anger;
