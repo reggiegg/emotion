@@ -20,7 +20,7 @@ public class EmotionOverlay : MonoBehaviour {
 			Color c = new Color(0, 0, 0, 0);
 			c.r = p.Anger;
 			c.b = p.Sadness;
-			c.g = (c.r + c.b) / 2.0f * p.Fear;
+			c = p.Fear * (new Color(0f, 0, 0)) + (1.0f - p.Fear) * c;
 
 			if(p.Confusion > 0)
 			{
