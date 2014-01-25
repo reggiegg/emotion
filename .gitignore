@@ -253,3 +253,9 @@ Assembly-CSharp.csproj
 *.dll
 
 *.userprefs
+
+Library/ScriptAssemblies/Assembly-CSharp.dll
+
+Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+
+Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
