@@ -12,6 +12,7 @@ public class Trigger : MonoBehaviour {
 	};
 
 	public Emotions emotion;
+	public bool addsEmotion;
 	// Use this for initialization
 	void Start () {
 		//emotion = Emotions.UNDEFINED;
@@ -26,7 +27,7 @@ public class Trigger : MonoBehaviour {
 	{
 		Player p = (Player)coll.GetComponent (typeof(Player));
 		if (p != null) {
-			p.triggerEmotion(this.emotion);
+			p.triggerEmotion(this.emotion, addsEmotion);
 		}
 	}
 }

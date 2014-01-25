@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
 	private Vector3 _curDest;
-	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.05f, EMOTION_DECAY = 0.001f;
+	private const float MAX_MOVE_SPEED = 5f, EMOTION_CHANGE = 0.05f, EMOTION_DECAY = 0.001f, NEGATIVE_EMOTION_CHANGE = 0.05f;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -79,21 +79,49 @@ public class Player : MonoBehaviour {
 		_confusion = Mathf.Max (0, _confusion - EMOTION_DECAY);
 	}
 
-	public void triggerEmotion(Trigger.Emotions emotion)
+	public void triggerEmotion(Trigger.Emotions emotion, bool addsEmotion)
 	{
 		switch(emotion)
 		{
 		case Trigger.Emotions.ANGER:
-			_anger = Mathf.Min(1, _anger + EMOTION_CHANGE);
+			if(addsEmotion)
+			{
+				_anger = Mathf.Min(1, _anger + EMOTION_CHANGE);
+			}
+			else
+			{
+				_anger = Mathf.Min(1, _anger - NEGATIVE_EMOTION_CHANGE);
+			}
 			break;
 		case Trigger.Emotions.SAD:
-			_sadness = Mathf.Min(1, _sadness + EMOTION_CHANGE);
+			if(addsEmotion)
+			{
+				_sadness = Mathf.Min(1, _sadness + EMOTION_CHANGE);
+			}
+			else
+			{
+				_sadness = Mathf.Min(1, _sadness - NEGATIVE_EMOTION_CHANGE);
+			}
 			break;
 		case Trigger.Emotions.FEAR:
-			_fear = Mathf.Min(1, _fear + EMOTION_CHANGE);
+			if(addsEmotion)
+			{
+				_fear = Mathf.Min(1, _fear + EMOTION_CHANGE);
+			}
+			else
+			{
+				_fear = Mathf.Min(1, _fear - NEGATIVE_EMOTION_CHANGE);
+			}
 			break;
 		case Trigger.Emotions.CONFUSION:
-			_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
+			if(addsEmotion)
+			{
+				_confusion = Mathf.Min(1, _confusion + EMOTION_CHANGE);
+			}
+			else 
+			{
+				_confusion = Mathf.Min(1, _confusion - NEGATIVE_EMOTION_CHANGE);
+			}
 			break;
 		case Trigger.Emotions.UNDEFINED:
 
