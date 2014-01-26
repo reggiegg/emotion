@@ -10,9 +10,12 @@ public class PlayerMove : MonoBehaviour {
 
 	private bool facingRight = true;
 
+	AudioSource[] audioSources;
+
 	// Use this for initialization
 	void Start () {
 		jumping = false;
+		audioSources = GetComponents<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -31,8 +34,10 @@ public class PlayerMove : MonoBehaviour {
 
 		if (jumping)
 		{
-			if (rigidbody2D.velocity.y < 0.001f && rigidbody2D.velocity.y > -0.001f)
+			if (rigidbody2D.velocity.y < 0.001f && rigidbody2D.velocity.y > -0.001f) {
 				jumping = false;
+				audioSources[1].Play();
+			}
 		}
 
 		if (Input.GetButton("Jump"))
@@ -41,6 +46,8 @@ public class PlayerMove : MonoBehaviour {
 			{
 				jumping = true;
 				rigidbody2D.AddForce(new Vector3(0.0f, jumpForce));
+				audioSources[0].Play();
+
 			}
 		}
 		Vector3 v = rigidbody2D.velocity;
