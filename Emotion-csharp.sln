@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{A3EB8A5D-CB86-8EE3-64E1-37EECAC63EAD}") = "Emotion", "Assembly-CSharp-vs.csproj", "{13E98F70-A97F-D4A5-89FA-0AF6C6EC0EFA}"
+Project("{7B5C057F-DBCC-F8FF-09A6-B9DF763ACE87}") = "emotion", "Assembly-CSharp-vs.csproj", "{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,16 +9,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13E98F70-A97F-D4A5-89FA-0AF6C6EC0EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13E98F70-A97F-D4A5-89FA-0AF6C6EC0EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13E98F70-A97F-D4A5-89FA-0AF6C6EC0EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13E98F70-A97F-D4A5-89FA-0AF6C6EC0EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-		GlobalSection(MonoDevelopProperties) = preSolution
-							GlobalSection(MonoDevelopProperties) = preSolution
+												GlobalSection(MonoDevelopProperties) = preSolution
+				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
