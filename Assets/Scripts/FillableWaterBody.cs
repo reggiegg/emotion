@@ -5,6 +5,7 @@ public class FillableWaterBody : MonoBehaviour {
 	
 	Transform spriteTransform;
 	public Vector3 spriteStartScale;
+	public float origionalScaleY;
 	 
 	void Start () {
 		spriteTransform = transform.Find("WaterSprite");

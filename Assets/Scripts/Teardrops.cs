@@ -6,7 +6,7 @@ public class Teardrops : MonoBehaviour {
 	float FILL_SPEED = 0.005f;
 
 	private ParticleSystem.CollisionEvent[] collisionEvents = new ParticleSystem.CollisionEvent[16];
-
+	float initialEmissionRate;
 	void OnParticleCollision(GameObject other) {
 
 		if (other.name == "WaterCollider") {
@@ -14,8 +14,8 @@ public class Teardrops : MonoBehaviour {
 			FillableWaterBody waterBody = (FillableWaterBody)other.GetComponent("FillableWaterBody");
 
 			Vector3 spriteStartScale = waterBody.spriteStartScale;
-
-			if (spriteTransform.localScale.y < spriteStartScale.y) {
+			float expectedHeight = spriteStartScale.y * ((Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player))).Sadness;
+			if (spriteTransform.localScale.y < expectedHeight) {
 				int safeLength = particleSystem.safeCollisionEventSize;
 				if (collisionEvents.Length < safeLength) {
 					collisionEvents = new ParticleSystem.CollisionEvent[safeLength];
@@ -35,11 +35,12 @@ public class Teardrops : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		initialEmissionRate = particleSystem.emissionRate;
+		particleSystem.emissionRate = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		particleSystem.emissionRate = ((Player)GameObject.FindGameObjectWithTag ("Player").GetComponent (typeof(Player))).Sadness * initialEmissionRate;
 	}
 }
