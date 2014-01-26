@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Rotate : MonoBehaviour {
 	public const float MAX_ROTATION = 360;
+	public const float GRAVITY = -20.03f;
 	private float prevConfusion;
 
 	private const float GRAVITY_MULTIPLIER = 2;
@@ -21,7 +22,7 @@ public class Rotate : MonoBehaviour {
 
 		//Rotate gravity
 		//p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, 0));
-		p.rigidbody2D.AddForce(sprite.transform.up * -9.81f * GRAVITY_MULTIPLIER);
+		p.rigidbody2D.AddForce(sprite.transform.up * GRAVITY);
 		//Rotate camera
 		Camera.main.transform.RotateAround(sprite.transform.position, Vector3.forward, MAX_ROTATION * confusionDiff);
 		//Rotate sprite

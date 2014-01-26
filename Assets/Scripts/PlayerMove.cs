@@ -25,27 +25,21 @@ public class PlayerMove : MonoBehaviour {
 
 	void FixedUpdate () {
 
-		float haxis = Input.GetAxis("Horizontal");
+				float haxis = Input.GetAxis ("Horizontal");
 
-		if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed)
-		{
-			float dx = 0.0f;
+				if (Mathf.Abs (rigidbody2D.velocity.x) < maxSpeed) {
+						float dx = 0.0f;
 
-			if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed * 0.25f)
-			{
-				dx = moveForce * 8;
-			}
-			else if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed * 0.5f)
-			{
-				dx = moveForce * 4;
-			}
-			else
-			{
-				dx = moveForce;
-			}
-			rigidbody2D.AddForce(new Vector3(Input.GetAxis("Horizontal") * dx, 0.0f));
-		}
-
+						if (Mathf.Abs (rigidbody2D.velocity.x) < maxSpeed * 0.25f) {
+								dx = moveForce * 8;
+						} else if (Mathf.Abs (rigidbody2D.velocity.x) < maxSpeed * 0.5f) {
+								dx = moveForce * 4;
+						} else {
+								dx = moveForce;
+						}
+						rigidbody2D.AddForce (new Vector3 (Input.GetAxis ("Horizontal") * dx, 0.0f));
+				}
+		
 		if (jumping)
 		{
 			if (rigidbody2D.velocity.y < 0.001f && rigidbody2D.velocity.y > -0.001f) {
@@ -65,18 +59,19 @@ public class PlayerMove : MonoBehaviour {
 		}
 		Vector3 v = rigidbody2D.velocity;
 
-		// If the input is moving the player right and the player is facing left...
-		if(haxis > 0 && !facingRight)
+				// If the input is moving the player right and the player is facing left...
+				if (haxis > 0 && !facingRight)
 			// ... flip the player.
-			Flip();
+						Flip ();
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if(haxis < 0 && facingRight)
-			// ... flip the player.
-			Flip();
+		else if (haxis < 0 && facingRight) {
+						// ... flip the player.
+						Flip();
 
-		//Debug.Log("Player velocity: " + v);
-	}
-	
+						//Debug.Log("Player velocity: " + v);
+				}
+		}
+
 	void Flip () {
 		// Switch the way the player is labelled as facing.
 		facingRight = !facingRight;

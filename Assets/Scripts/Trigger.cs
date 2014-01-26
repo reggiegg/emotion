@@ -62,7 +62,7 @@ public class Trigger : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
-		Player p = (Player)coll.GetComponent (typeof(Player));
+		Player p = (Player)coll.GetComponent(typeof(Player));
 		if (p != null) {
 			p.triggerEmotion (this.emotion, addsEmotion);
 		}
