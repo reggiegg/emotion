@@ -14,11 +14,17 @@ public class Rotate : MonoBehaviour {
 	// Update is called once per fram
 	void Update() {
 		Player p = (Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player));
+		var spriteArray = GameObject.FindGameObjectsWithTag ("Sprite");
+		var sprite = spriteArray [0];
 		float confusionDiff = p.Confusion - prevConfusion;
-		Camera.main.transform.Rotate(0f, 0f, MAX_ROTATION*confusionDiff);
-		p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION))*-9.81f, 0));
-		//p.transform.Rotate(0f,0f,(0.7f*MAX_ROTATION*confusionDiff));
-		prevConfusion = p.Confusion;
 
+		//Rotate gravity
+		p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION))*-9.81f, 0));
+		Vector3 sprite_position = new Vector3 (sprite.transform.position.x, sprite.transform.position.y, sprite.transform.position.z);
+		//Rotate camera
+		Camera.main.transform.RotateAround(sprite_position, Vector3.forward, MAX_ROTATION * confusionDiff);
+		//Rotate sprite
+		sprite.transform.Rotate(0f,0f,(MAX_ROTATION*confusionDiff));
+		prevConfusion = p.Confusion;
 	}
 }
