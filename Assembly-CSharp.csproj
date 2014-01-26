@@ -48,13 +48,16 @@
   <ItemGroup>
      <Compile Include="Assets\ButtonManager.cs" />
      <Compile Include="Assets\ButtonScript.cs" />
+     <Compile Include="Assets\Dust.cs" />
      <Compile Include="Assets\EmotionMonitor.cs" />
      <Compile Include="Assets\EmotionOverlay.cs" />
      <Compile Include="Assets\ExitButtonScript.cs" />
+     <Compile Include="Assets\FillableWaterBody.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PlayerMove.cs" />
      <Compile Include="Assets\Scale.cs" />
      <Compile Include="Assets\StartButtonScript.cs" />
+     <Compile Include="Assets\Teardrops.cs" />
      <Compile Include="Assets\TransX.cs" />
      <Compile Include="Assets\TransY.cs" />
      <Compile Include="Assets\Trigger.cs" />
