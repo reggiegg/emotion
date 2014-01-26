@@ -17,6 +17,6 @@ public class FillableWaterBody : MonoBehaviour {
 
 	
 	void Update () {
-	
+		spriteTransform.localScale = new Vector3(spriteStartScale.x, spriteStartScale.y * ((Player)GameObject.FindGameObjectWithTag ("Player").GetComponent (typeof(Player))).Sadness);
 	}
 }
