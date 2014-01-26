@@ -5,6 +5,7 @@ public class Player : MonoBehaviour {
 
 	private float _anger, _fear, _sadness, _confusion;
 	private const float EMOTION_CHANGE = 0.01f, EMOTION_DECAY = 0.0025f, NEGATIVE_EMOTION_CHANGE = 0.01f;
+	private Vector3 _initPos;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour {
 		_fear = 0f;
 		_sadness = 0f;
 		_confusion = 0f;
+		_initPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -111,5 +113,14 @@ public class Player : MonoBehaviour {
 
 			break;
 		}
+	}
+
+	public void reset()
+	{
+		_anger = 0f;
+		_fear = 0f;
+		_sadness = 0f;
+		_confusion = 0f;
+		transform.position = _initPos;
 	}
 }
