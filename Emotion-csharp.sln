@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{7B5C057F-DBCC-F8FF-09A6-B9DF763ACE87}") = "emotion", "Assembly-CSharp.csproj", "{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}"
+Project("{7B5C057F-DBCC-F8FF-09A6-B9DF763ACE87}") = "emotion", "Assembly-CSharp-vs.csproj", "{CE09F1D5-3DFA-DD28-5B6A-6A415919A100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,7 +17,8 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-						GlobalSection(MonoDevelopProperties) = preSolution
+										GlobalSection(MonoDevelopProperties) = preSolution
+				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
