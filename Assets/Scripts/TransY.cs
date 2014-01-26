@@ -34,13 +34,13 @@ public class TransY : MonoBehaviour {
 		if (deltaUpMax > 0)
 		{
 			deltaUp = (int)Mathf.Round(deltaUp * p.Anger);
-			position.y = originalY - deltaUp;
+			position.y = originalY + deltaUp;
 		}
 		
 		if (deltaDownMax > 0)
 		{
 			deltaDown = (int)Mathf.Round(deltaDownMax * p.Anger);
-			position.y = originalY + deltaDown;
+			position.y = originalY - deltaDown;
 			
 		}
 		
