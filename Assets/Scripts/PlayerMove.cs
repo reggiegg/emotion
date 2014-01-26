@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour {
 	public float maxSpeed;
 
 	private bool jumping;
+	public bool inWater;
 
 	private bool facingRight = true;
 
@@ -16,6 +17,7 @@ public class PlayerMove : MonoBehaviour {
 	void Start () {
 		jumping = false;
 		audioSources = GetComponents<AudioSource> ();
+		inWater = false;
 	}
 	
 	// Update is called once per frame
@@ -48,9 +50,9 @@ public class PlayerMove : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetButton("Jump"))
+		if (Input.GetButtonDown("Jump"))
 		{
-			if (!jumping)
+			if (!jumping || inWater)
 			{
 				jumping = true;
 				rigidbody2D.AddForce(new Vector3(0.0f, jumpForce));
