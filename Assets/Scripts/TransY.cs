@@ -23,33 +23,27 @@ public class TransY : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// Temp code before emotion system is in place
-		if (Input.GetButton("Fire1"))
-		{
-			if (emotionScale <= 1.0f)
-				emotionScale += 0.01f;
-		}
-		if (Input.GetButton("Fire2"))
-		{
-			if (emotionScale >= 0.01f)
-				emotionScale -= 0.01f;
-		}
-
+		
 		Vector3 position = this.transform.position;
-
+		//float anger = ((Player)GameObject.FindGameObjectWithTag("Player")).Anger;
+		//float anger = 0.0f;
+		Player p = (Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player));
+		
+		//Player p = MonoBehaviour.FindObjectOfType(Player);
+		
 		if (deltaUpMax > 0)
 		{
-			deltaUp = (int)Mathf.Round(deltaUpMax * emotionScale);
+			deltaUp = (int)Mathf.Round(deltaUp * p.Anger);
 			position.y = originalY + deltaUp;
 		}
-
+		
 		if (deltaDownMax > 0)
 		{
-			deltaDown = (int)Mathf.Round(deltaDownMax * emotionScale);
+			deltaDown = (int)Mathf.Round(deltaDownMax * p.Anger);
 			position.y = originalY - deltaDown;
-
+			
 		}
-
+		
 		this.transform.position = position;
 	}
 }
