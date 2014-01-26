@@ -84,10 +84,16 @@ public class PlayerMove : MonoBehaviour {
 			facingRight = !facingRight;
 			
 			// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.FindChild("Player_Anim").transform.localScale;
-			theScale.x *= -1;
-		transform.FindChild("Player_Anim").transform.localScale = theScale;
+		Transform trans = transform.FindChild ("Player_Anime");
+		if (trans != null) {
+			Vector3 theScale = transform.FindChild("Player_Anim").transform.localScale;
+				theScale.x *= -1;
+			transform.FindChild("Player_Anim").transform.localScale = theScale;
+		}
+		else{
+			Debug.LogError("Null error: Flip animation not found");
 		}
 	}
+}
 
 
