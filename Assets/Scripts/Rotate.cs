@@ -5,6 +5,7 @@ public class Rotate : MonoBehaviour {
 	public const float MAX_ROTATION = 360;
 	private float prevConfusion;
 
+	private const float GRAVITY_MULTIPLIER = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -19,12 +20,12 @@ public class Rotate : MonoBehaviour {
 		float confusionDiff = p.Confusion - prevConfusion;
 
 		//Rotate gravity
-		p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION))*-9.81f, 0));
-		Vector3 sprite_position = new Vector3 (sprite.transform.position.x, sprite.transform.position.y, sprite.transform.position.z);
+		//p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, 0));
+		p.rigidbody2D.AddForce(sprite.transform.up * -9.81f * GRAVITY_MULTIPLIER);
 		//Rotate camera
-		Camera.main.transform.RotateAround(sprite_position, Vector3.forward, MAX_ROTATION * confusionDiff);
+		Camera.main.transform.RotateAround(sprite.transform.position, Vector3.forward, MAX_ROTATION * confusionDiff);
 		//Rotate sprite
-		sprite.transform.Rotate(0f,0f,(MAX_ROTATION*confusionDiff));
+		sprite.transform.Rotate(0f, 0f, (MAX_ROTATION * confusionDiff));
 		prevConfusion = p.Confusion;
 	}
 }
