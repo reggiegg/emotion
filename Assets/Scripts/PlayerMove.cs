@@ -82,6 +82,10 @@ public class PlayerMove : MonoBehaviour {
 		Vector3 theScale = transform.FindChild("Player_Anim").transform.localScale;
 		theScale.x *= -1;
 		transform.FindChild("Player_Anim").transform.localScale = theScale;
+
+		Vector3 headScale = transform.FindChild("Head").transform.localScale;
+		headScale.x *= -1;
+		transform.FindChild("Head").transform.localScale = headScale;
 	}
 }
 
