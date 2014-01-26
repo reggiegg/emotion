@@ -1,14 +1,32 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerMove.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scale.cs">
     <Files>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <File FileName="Assets/TransX.cs" Line="53" Column="53" />
+      <File FileName="Assets/TransY.cs" Line="49" Column="28" />
+      <File FileName="Assets/Scale.cs" Line="37" Column="42" />
+      <File FileName="Assets/Player.cs" Line="38" Column="4" />
+=======
+      <File FileName="Assets\StartButtonScript.cs" Line="11" Column="1" />
+      <File FileName="Assets\EmotionOverlay.cs" Line="1" Column="1" />
+      <File FileName="Assets\Trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\TransX.cs" Line="1" Column="1" />
       <File FileName="Assets\TransY.cs" Line="1" Column="1" />
       <File FileName="Assets\Scale.cs" Line="1" Column="1" />
-      <File FileName="Assets\Player.cs" Line="38" Column="4" />
-      <File FileName="Assets\PlayerMove.cs" Line="66" Column="79" />
-      <File FileName="..\SnowballUnity\Assets\PlayerControl.cs" Line="116" Column="1" />
+      <File FileName="Assets\ButtonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\ButtonManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\ExitButtonScript.cs" Line="8" Column="23" />
+>>>>>>> origin/NormanBranch
+=======
+      <File FileName="Assets/Player.cs" Line="7" Column="68" />
+      <File FileName="Assets/PlayerMove.cs" Line="43" Column="5" />
+      <File FileName="Assets/Trigger.cs" Line="22" Column="18" />
+      <File FileName="Assets/TransX.cs" Line="30" Column="3" />
+      <File FileName="Assets/Scale.cs" Line="34" Column="1" />
+>>>>>>> origin/Sprite
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
