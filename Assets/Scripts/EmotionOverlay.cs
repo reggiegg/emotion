@@ -9,7 +9,7 @@ public class EmotionOverlay : MonoBehaviour {
 	public bool fadingToBlack, hasFadedToBlack;
 	private bool _deathTransition, _resetting ;
 	void Start () {
-		transform.localScale = new Vector3 (Camera.main.pixelWidth * 5, Camera.main.pixelHeight * 5, 1);
+		transform.localScale = new Vector3 (Camera.main.pixelWidth * 50, Camera.main.pixelHeight * 50, 1);
 		((SpriteRenderer)renderer).color = new Color (1.0f, 0, 0, 0f);
 		transform.position = new Vector3 (Camera.main.transform.position.x, Camera.main.transform.position.y, 0);
 		_confusedColour = new Color (0.5f, 0.5f, 0);

@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		updateEmotions ();
-		Debug.Log("Anger: " + _anger);
+		//Debug.Log("Anger: " + _anger);
 
 	}
 
