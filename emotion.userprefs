@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Rotate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TransY.cs">
     <Files>
-      <File FileName="Assets\Rotate.cs" Line="19" Column="1" />
-      <File FileName="Assets\Rotate.cs" Line="31" Column="1" />
-      <File FileName="Assets\PlayerMove.cs" Line="1" Column="1" />
-      <File FileName="Assets\Dust.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scale.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\TransY.cs" Line="42" Column="55" />
+      <File FileName="Assets\Scripts\TransY.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Scale.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rotate.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TransX.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
