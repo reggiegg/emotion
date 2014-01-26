@@ -17,7 +17,7 @@ public class Rotate : MonoBehaviour {
 		float confusionDiff = p.Confusion - prevConfusion;
 		Camera.main.transform.Rotate(0f, 0f, MAX_ROTATION*confusionDiff);
 		p.gameObject.rigidbody2D.AddForce(new Vector3 (-Mathf.Sin(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION)) * -9.81f, Mathf.Cos(Mathf.Deg2Rad*(p.Confusion * MAX_ROTATION))*-9.81f, 0));
-		p.transform.Rotate(0f,0f,(0.7f*MAX_ROTATION*confusionDiff));
+		//p.transform.Rotate(0f,0f,(0.7f*MAX_ROTATION*confusionDiff));
 		prevConfusion = p.Confusion;
 
 	}
