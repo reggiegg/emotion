@@ -26,7 +26,6 @@ public class PlayerMove : MonoBehaviour {
 
 		if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed)
 		{
-<<<<<<< HEAD
 			float dx = 0.0f;
 
 			if (Mathf.Abs(rigidbody2D.velocity.x) < maxSpeed * 0.25f)
@@ -42,9 +41,6 @@ public class PlayerMove : MonoBehaviour {
 				dx = moveForce;
 			}
 			rigidbody2D.AddForce(new Vector3(Input.GetAxis("Horizontal") * dx, 0.0f));
-=======
-			rigidbody2D.AddForce(new Vector3(haxis * moveForce, 0.0f));
->>>>>>> origin/LewisBranch
 		}
 
 		if (jumping)
@@ -81,7 +77,7 @@ public class PlayerMove : MonoBehaviour {
 			facingRight = !facingRight;
 			
 			// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.FindChild ("Player_Anim").transform.localScale;
+		Vector3 theScale = transform.FindChild("Player_Anim").transform.localScale;
 			theScale.x *= -1;
 		transform.FindChild("Player_Anim").transform.localScale = theScale;
 		}
