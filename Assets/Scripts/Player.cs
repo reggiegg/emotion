@@ -3,9 +3,14 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
+	private const float EMOTION_CHANGE = 0.0075f;
+	private const float NEGATIVE_EMOTION_CHANGE = 0.0075f;
+	private const float EMOTION_DECAY = 0.0025f;
+	private const float CONFUSION_DECAY = 0.005f;
+
 	private float _anger, _fear, _sadness, _confusion;
-	private const float EMOTION_CHANGE = 0.01f, EMOTION_DECAY = 0.0025f, NEGATIVE_EMOTION_CHANGE = 0.01f;
 	private Vector3 _initPos;
+	private bool triggeredLastFrame = false;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
@@ -28,9 +33,11 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		updateEmotions ();
-		//Debug.Log("Anger: " + _anger);
-
+		if (!triggeredLastFrame) {
+			updateEmotions ();
+			//Debug.Log("Anger: " + _anger);
+		}
+		triggeredLastFrame = false;
 	}
 
 	void updateEmotions()
@@ -59,7 +66,7 @@ public class Player : MonoBehaviour {
 		_anger = Mathf.Max (0, _anger - EMOTION_DECAY);
 		_fear = Mathf.Max (0, _fear - EMOTION_DECAY);
 		_sadness = Mathf.Max (0, _sadness - EMOTION_DECAY);
-		_confusion = Mathf.Max (0, _confusion - EMOTION_DECAY);
+		_confusion = Mathf.Max (0, _confusion - CONFUSION_DECAY);
 	}
 
 	public void triggerEmotion(Trigger.Emotions emotion, bool addsEmotion)
@@ -113,6 +120,8 @@ public class Player : MonoBehaviour {
 
 			break;
 		}
+
+		triggeredLastFrame = true;
 	}
 
 	public void reset()
