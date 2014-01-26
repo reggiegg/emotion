@@ -1,18 +1,32 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 6995aa660a12de0459a6d2cb7b6d2309
 =======
 guid: 6f98a755196f7ac4bad7cfbec1d0ee2a
 >>>>>>> origin/LewisBranch
+=======
+guid: 6f98a755196f7ac4bad7cfbec1d0ee2a
+=======
+guid: 6995aa660a12de0459a6d2cb7b6d2309
+>>>>>>> origin/LarissaBranch
+>>>>>>> LewisBranch
 TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableMipMap: 0
 =======
     enableMipMap: 1
 >>>>>>> origin/LewisBranch
+=======
+    enableMipMap: 1
+=======
+    enableMipMap: 0
+>>>>>>> origin/LarissaBranch
+>>>>>>> LewisBranch
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -33,6 +47,7 @@ TextureImporter:
   textureSettings:
     filterMode: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
     aniso: -1
     mipBias: -1
     wrapMode: -1
@@ -41,6 +56,8 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
 =======
+=======
+>>>>>>> LewisBranch
     aniso: 1
     mipBias: -1
     wrapMode: 0
@@ -48,12 +65,25 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
+<<<<<<< HEAD
 >>>>>>> origin/LewisBranch
+=======
+=======
+    aniso: -1
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+>>>>>>> origin/LarissaBranch
+>>>>>>> LewisBranch
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
 <<<<<<< HEAD
   alphaIsTransparency: 1
   textureType: 8
@@ -61,6 +91,14 @@ TextureImporter:
   alphaIsTransparency: 0
   textureType: 0
 >>>>>>> origin/LewisBranch
+=======
+  alphaIsTransparency: 0
+  textureType: 0
+=======
+  alphaIsTransparency: 1
+  textureType: 8
+>>>>>>> origin/LarissaBranch
+>>>>>>> LewisBranch
   buildTargetSettings:
   - buildTarget: iPhone
     maxTextureSize: 1024

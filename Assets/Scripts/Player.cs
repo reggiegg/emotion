@@ -11,11 +11,14 @@ public class Player : MonoBehaviour {
 	private float _anger, _fear, _sadness, _confusion;
 	private Vector3 _initPos;
 	private bool triggeredLastFrame = false;
+	private Trigger.Emotions lastTriggered = Trigger.Emotions.SAD;
 
 	public float Anger	{ get{ return _anger; } }
 	public float Fear	{ get{ return _fear; } }
 	public float Sadness	{ get{ return _sadness; } }
 	public float Confusion	{ get{ return _confusion; } }
+
+	private Animation faceAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +27,8 @@ public class Player : MonoBehaviour {
 		_sadness = 0f;
 		_confusion = 0f;
 		_initPos = transform.position;
+
+		faceAnim = transform.Find("Face_Anim").animation;
 	}
 	
 	// Update is called once per frame
@@ -122,6 +127,41 @@ public class Player : MonoBehaviour {
 		}
 
 		triggeredLastFrame = true;
+
+		if (emotion != lastTriggered) {
+			/*
+			if (lastTriggered == Trigger.Emotions.SAD && emotion == Trigger.Emotions.ANGER) {
+				//faceAnim.Play("face");
+			} else if (lastTriggered == Trigger.Emotions.ANGER && emotion == Trigger.Emotions.SAD) {
+
+			} else if (lastTriggered == Trigger.Emotions.SAD && emotion == Trigger.Emotions.CONFUSION) {
+				
+			} else if (lastTriggered == Trigger.Emotions.CONFUSION && emotion == Trigger.Emotions.SAD) {
+				
+			} else if (lastTriggered == Trigger.Emotions.SAD && emotion == Trigger.Emotions.FEAR) {
+				
+			} else if (lastTriggered == Trigger.Emotions.FEAR && emotion == Trigger.Emotions.SAD) {
+				
+			} else if (lastTriggered == Trigger.Emotions.ANGER && emotion == Trigger.Emotions.CONFUSION) {
+				
+			} else if (lastTriggered == Trigger.Emotions.CONFUSION && emotion == Trigger.Emotions.ANGER) {
+				
+			} else if (lastTriggered == Trigger.Emotions.ANGER && emotion == Trigger.Emotions.FEAR) {
+				
+			} else if (lastTriggered == Trigger.Emotions.FEAR && emotion == Trigger.Emotions.ANGER) {
+				
+			} else if (lastTriggered == Trigger.Emotions.FEAR && emotion == Trigger.Emotions.CONFUSION) {
+				
+			} else if (lastTriggered == Trigger.Emotions.CONFUSION && emotion == Trigger.Emotions.FEAR) {
+				
+			} else {
+				// Execution should never reach this point
+			}
+			*/
+
+		}
+
+		lastTriggered = emotion;
 	}
 
 	public void reset()

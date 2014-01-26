@@ -28,5 +28,8 @@ public class Rotate : MonoBehaviour {
 		//Rotate sprite
 		sprite.transform.Rotate(0f, 0f, (MAX_ROTATION * confusionDiff));
 		prevConfusion = p.Confusion;
+
+		//Rotate the head
+		p.transform.Find ("Face_Anim").transform.RotateAround (sprite.transform.position, Vector3.forward, MAX_ROTATION * confusionDiff);
 	}
 }
