@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\EmotionOverlay.cs" />
      <Compile Include="Assets\Scripts\ExitButtonScript.cs" />
      <Compile Include="Assets\Scripts\FillableWaterBody.cs" />
-     <Compile Include="Assets\Scripts\MenuMouseover.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />

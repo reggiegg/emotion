@@ -5,6 +5,6 @@ public class StartButtonScript : ButtonScript {
 
 	public override void doAction()
 	{
-		Application.LoadLevel ("Level1");
+		Application.LoadLevel ("OfficeScene");
 	}
 }
