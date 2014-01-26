@@ -12,7 +12,7 @@ public class Rotate : MonoBehaviour {
 	}
 
 	// Update is called once per fram
-	void Update() {
+	void FixedUpdate() {
 		Player p = (Player)GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Player));
 		var spriteArray = GameObject.FindGameObjectsWithTag ("Sprite");
 		var sprite = spriteArray [0];
