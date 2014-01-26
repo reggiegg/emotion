@@ -272,3 +272,5 @@ emotion-csharp.sln
 emotion.sln
 
 emotion.sln
+
+*.userprefs
